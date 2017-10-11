@@ -8,14 +8,14 @@ applications:
   env:
     destinations: >
       [
-        {"name":"js", "url":"https://s090:64012", "forwardAuthToken": true}
+        {"name":"js", "url":"https://hxehost:64012", "forwardAuthToken": true}
       ]
   services:
-    - my-uaa
+    - live5uaa
 
 - name: myapp1-js
   port: 64012
   path: js
   memory: 128M
   services:
-    - my-uaa
+    - live5uaa

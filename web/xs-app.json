@@ -1,0 +1,16 @@
+{
+    "welcomeFile": "index.html",
+    "logout":  {
+        "logoutEndpoint":  "/do/logout"
+    },
+    "routes": [
+        {
+            "destination": "js",
+            "source": "(.*)(.js)"
+        },
+        {
+            "localDir": "resources",
+            "source": "^/(.*)"
+        }
+    ]
+}
