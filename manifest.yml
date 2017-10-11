@@ -1,0 +1,21 @@
+---
+applications:
+
+- name: myapp1-web
+  port: 64011
+  memory: 100M
+  path: web
+  env:
+    destinations: >
+      [
+        {"name":"js", "url":"https://s090:64012", "forwardAuthToken": true}
+      ]
+  services:
+    - my-uaa
+
+- name: myapp1-js
+  port: 64012
+  path: js
+  memory: 128M
+  services:
+    - my-uaa
